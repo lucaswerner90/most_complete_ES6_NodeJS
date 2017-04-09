@@ -18,9 +18,8 @@ const MAIN_CONF= require('./gulp_config');
 
 
 gulp.task('sass', function () {
-  return gulp.src(MAIN_CONF.src_folder+MAIN_CONF.src_files.style)
+  return gulp.src('.src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer(MAIN_CONF.compatible_browsers))
     .pipe(concat("main.css"))
     .pipe(gulp.dest(MAIN_CONF.compiled_folder+MAIN_CONF.compiled_files.style))
     .pipe(browserSync.stream());

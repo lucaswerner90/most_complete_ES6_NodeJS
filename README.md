@@ -1,45 +1,24 @@
-LUCAS WERNER's APPLICATION
+# Candidate Exercise
 
-Instructions:
-1) npm install  -- to install all the npm dependencies
-2) npm start    -- to compile and execute a localserver that runs on port 3000 with our app (dist folder)
+## Requirements
 
-Structure:
+Let's pretend we want to sell books online (like Amazon). As a first step we want to build a site that lists books displaying the book cover image, title, author, open library Id number (OLID), and price.
 
-1) src folder:
-  Contains the source code of the application.
-  1.1) data folder:
-    Contains the files that we use to simulate the API call.
-  1.2) js folder:
-    Contains the JS files of the project
-      1.2.1) libs folder:
-        JS files for the libs used in the application.
-  1.3) scss folder:
-      Contains the scss and css files used in the application.
-  1.4) index.html file:
-    Entry point of the application.
+We'd also like a form that allows us to filter (on the server side) by the book's title or OLID. If searching by OLID we should validate it before we send it to our server. If it's not a valid OLID then we can assume it's a title.
 
-2) dist folder:
-  Contains the compiled source of the application.
+The list of books we want to sell is available here https://goo.gl/Lk2MTJ. There is an example of the API response in the `books.json` file. Note that the API doesn't provide pricing. We'll have to add that later.
 
-3) .babelrc:
-  Contains the presets of the babel tool.
+Finally, we’d like the front-end to be styled to match the following design. The designer forgot to add the OLID number to the mockup.
 
-4) gulp_config.js:
-  Contains the main configuration of the gulpfile.
+![Alt Text](design.jpg)
 
-5) gulpfile.js:
-  Contains the tasks needed to create the compiled code.
+## What we’re looking for
 
-6) package.json:
-  File generated throught the npm command tool and contains the dependencies needed to execute the application.
+* Good test coverage
+* Clean, well structured code
+* Logical approach to implementation
+* Appropriate use of third party libs
 
+## What is here
 
-
-Considerations:
-
-- I try to use ES6 features. It implies that I had to use babelify and browserify to make the code readable for actual browsers.
-
-- All the code is thought to be maintenable and scalable although it has a lot of pending improvements, but because of the time I decided to make only the main things.
-
-- It's pending to create the user's test (which could be implemented for example in Mocha)
+The backend is a simple server running [hapi](https://hapijs.com). The frontend is plain html with jQuery. You can swap out any of these technologies as you see fit.

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Client Side Mocha Tests</title>
+  </head>
+  <link rel="stylesheet" href="../../../node_modules/mocha/mocha.css">
+  <style media="screen">
+    #query,#send,#list_books{
+      display: none;
+    }
+  </style>
+  <script src="../../../node_modules/mocha/mocha.js" charset="utf-8"></script>
+  <script src="../../../node_modules/chai/chai.js" charset="utf-8"></script>
+  <script src="../../../node_modules/blanket/src/blanket.js" data-cover-adapter="../../../node_modules/blanket/dist/blanket_mocha.min.js" charset="utf-8"></script>
+  <script>
+    mocha.setup('bdd')
+    mocha.reporter('html');
+    const assert = chai.assert;
+  </script>
+
+  <body>
+
+    <!-- Our interfaces elements -->
+    <input type="text" id="query" class="col-lg-11 col-md-11 col-sm-11 col-xs-10 input_search" name="" placeholder="Search term..." value="">
+    <button type="submit" id="send" class="col-lg-1 col-sm-1 col-xs-2 col-md-1 height_icon"></button>
+    <div id="list_books" class="row"></div>
+
+
+
+    <div id="mocha"></div>
+
+
+
+    <!-- Our code to test -->
+    <script src="../../js/main.js" charset="utf-8"></script>
+
+    <!-- Our tests -->
+    <script src="./frontend.test.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      mocha.run();
+    </script>
+  </body>
+</html>

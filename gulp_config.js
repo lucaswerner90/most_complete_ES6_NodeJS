@@ -14,7 +14,7 @@ const CONFIG={
     'bb >= 10'
   ],
   src_files:{
-    style:'/scss/**/*.{scss,css}',
+    style:'/scss/**/*.{scss}',
     code_entry_point:'/js/main.js',
     code:'/js/**/*.js',
     libs:'/js/libs/**/*',
