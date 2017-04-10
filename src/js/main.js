@@ -27,6 +27,7 @@ class VendigoBookStore{
 
     this._loadData(this._urls_data.init_data,(error,data)=>{
       if(error){
+        console.error(error);
         return;
       }
       this._paintBooks(data);
@@ -73,9 +74,13 @@ class VendigoBookStore{
         const book=books[i];
 
 
+
+
         const div_book=_self._createElement('div',{
-          className:"book col-lg-3 col-md-3 col-sm-3 col-xs-3"
+          className:"padding_box"
         });
+
+
 
         div_book.appendChild(_self._createElement('img',{
           className:"image_book",
@@ -107,11 +112,17 @@ class VendigoBookStore{
 
 
         div_book.appendChild(_self._createElement('button',{
-          className:"button_add",
+          className:"btn button_add",
           innerHTML:`Add to cart`
         }));
 
-        container.appendChild(div_book);
+        const box_book=_self._createElement('div',{
+          className:"book col-lg-4 col-md-4 col-sm-6 col-xs-12"
+        });
+
+        box_book.appendChild(div_book);
+
+        container.appendChild(box_book);
       }
     }
 

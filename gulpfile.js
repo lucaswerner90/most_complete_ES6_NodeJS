@@ -18,10 +18,10 @@ const MAIN_CONF= require('./gulp_config');
 
 
 gulp.task('sass', function () {
-  return gulp.src('.src/scss/**/*.scss')
+  return gulp.src('./src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat("main.css"))
-    .pipe(gulp.dest(MAIN_CONF.compiled_folder+MAIN_CONF.compiled_files.style))
+    .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
 });
 
@@ -70,6 +70,6 @@ gulp.task('init',['copy_index','copy_libs','sass','js'], function () {
 
 gulp.task('execute',['init','localserver'],function () {
   gulp.watch([MAIN_CONF.src_folder+MAIN_CONF.src_files.html], ['copy_index']);
-  gulp.watch(MAIN_CONF.src_folder+MAIN_CONF.src_files.style, ['sass']);
+  gulp.watch('./src/scss/**/*.scss', ['sass']);
   gulp.watch(MAIN_CONF.src_folder+MAIN_CONF.src_files.code, ['js']);
 })

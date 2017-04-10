@@ -9,40 +9,123 @@ body,html {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  background-color: whitesmoke;
 }
-
+.header {
+  margin-bottom: 3%;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #dedede;
+}
+span.glyphicon.glyphicon-book {
+  float: left;
+  font-size: 36px;
+  color: #d74838;
+  margin-top: 0.67em;
+  margin-right: 15px;
+}
 h4 {
   margin-top: 0px;
+  text-transform: uppercase;
+  &.sub_title{
+    font-size:12px;
+    color: #ccc;
+    font-weight: 300;
+  }
 }
 h1{
   margin-bottom:0px;
+  &.main_title {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
 }
-
+form{
+  position: relative;
+}
 .margin10_t{
   margin-top:10px;
 }
+.featured {
+  border: 1px solid #d74838;
+  background: #d74838;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 400;
+  padding-left: 30px;
+}
 
+#list_books {
+  padding-top: 1%;
+  background-color: whitesmoke;
+}
 .book {
   display: block;
   float: left;
-  height: 430px;
-  border: 1px solid gray;
+  height: 500px;
+
+  .padding_box {
+    border: 1px solid lightgrey;
+    padding: 0% 8% 8% 11%;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 10px;
+    background-color: white;
+
+    img.image_book {
+      width: 150px;
+      height: 250px;
+      max-width: 150px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    p.price {
+      width: auto;
+      float: left;
+      font-size: 24px;
+    }
+
+    button.button_add {
+      float: right;
+      background-color: black;
+      color: white;
+    }
+
+    p.title {
+      font-weight: bold;
+      color: darkred;
+      margin-bottom: 0;
+    }
+    p.by_statement {
+      font-weight: 200;
+      color: darkred;
+    }
+  }
+
+
 }
 
-img.image_book {
-  width: 150px;
-  height: 250px;
-  max-width: 150px;
-  margin: 40px auto;
-  display: block;
-}
 
-.height_icon{
-  height: 30px;
+
+
+.height_icon {
+  height: 39px;
+  margin-top: 6px;
+  position: absolute;
+  right: 20px;
+  background: #d74838;
 }
 
 .input_search{
-  line-height: 26px;
-  border: 1px solid gray;
-  border-right: 0px solid;
+  line-height: 36px;
+  border: 6px solid #dedede;
+  border-radius: 10px;
+}
+
+span.glyphicon.glyphicon-search {
+  color: white;
+  font-size: 18px;
 }
