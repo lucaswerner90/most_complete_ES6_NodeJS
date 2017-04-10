@@ -3,7 +3,7 @@ const express=require('express');
 const app=express();
 const body_parser=require('body-parser');
 
-const PORT=process.env.PORT || 4000;
+const PORT=process.env.PORT || 7000;
 const HOST=process.env.HOST || 'localhost';
 
 const books_router=require('./src/server/routes/books.router');
@@ -24,7 +24,15 @@ app.use("/api/books",books_router);
 
 app.use(express.static('dist'));
 
-app.listen({
-  host: HOST,
-  port: PORT
-});
+
+// For test purposses we check for the module.parent
+// and exports our server to be used with supertest on our test
+if(!module.parent){
+  app.listen({
+    host: HOST,
+    port: PORT
+  });
+}
+
+
+module.exports=app;

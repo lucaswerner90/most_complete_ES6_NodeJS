@@ -15,7 +15,6 @@ class BookParser {
   }
 
   filterByOLID(OLID=''){
-
     if(all_books[OLID]){
       let OLID_Book=[];
       OLID_Book.push(all_books[OLID]);

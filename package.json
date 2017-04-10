@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect server.js",
-    "test": "mocha ./src/test/server_side/*.test.js",
+    "start": "DEBUG=express* nodemon server.js",
+    "test": "PORT=9000 mocha --watch ./src/test/server_side/*.test.js",
+    "coverage": "PORT=9000 nyc --reporter=html mocha --watch ./src/test/server_side/**/*.test.js",
     "compile": "gulp init && gulp execute"
   },
   "engines": {
@@ -28,9 +29,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
+    "nyc": "^10.2.0",
     "poncho": "^0.1.1",
+    "supertest": "^3.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },

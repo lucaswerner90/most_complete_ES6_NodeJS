@@ -7,9 +7,9 @@ class VendigoBookStore{
   constructor(settings_object){
 
     this._urls_data={
-      init_data:{url:'http://localhost:4000/api/books',method:'GET'},
-      title:{url:'http://localhost:4000/api/books/title',method:'POST',body:{title:""}},
-      olid:{url:'http://localhost:4000/api/books/OLID',method:'POST',body:{OLID:""}}
+      init_data:{url:'http://localhost:7000/api/books',method:'GET'},
+      title:{url:'http://localhost:7000/api/books/title',method:'POST',body:{title:""}},
+      olid:{url:'http://localhost:7000/api/books/OLID',method:'POST',body:{OLID:""}}
     }
 
     this._list_books=settings_object.list_of_books;
