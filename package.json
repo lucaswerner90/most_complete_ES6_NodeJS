@@ -7,6 +7,9 @@
     "start": "node server.js",
     "test": "PORT=9000 mocha --watch ./src/test/server_side/*.test.js",
     "coverage": "PORT=9000 nyc --reporter=html mocha --watch ./src/test/server_side/**/*.test.js",
+    "heroku_deploy": "git add . && git commit -m 'Heroku deployment' && git push heroku master",
+    "heroku_open":"heroku open",
+    "heroku_log":"heroku logs --tail",
     "compile": "gulp init && gulp execute"
   },
   "engines": {
