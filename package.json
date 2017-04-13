@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=express* nodemon server.js",
+    "start": "node server.js",
     "test": "PORT=9000 mocha --watch ./src/test/server_side/*.test.js",
     "coverage": "PORT=9000 nyc --reporter=html mocha --watch ./src/test/server_side/**/*.test.js",
     "compile": "gulp init && gulp execute"
