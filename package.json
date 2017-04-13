@@ -1,5 +1,5 @@
 {
-  "name": "Vendigo",
+  "name": "Heroku_test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "node server.js",
     "test": "PORT=9000 mocha --watch ./src/test/server_side/*.test.js",
     "coverage": "PORT=9000 nyc --reporter=html mocha --watch ./src/test/server_side/**/*.test.js",
-    "heroku_deploy": "git add . && git commit -m 'Heroku deployment' && git push heroku master",
+    "heroku_deploy": "gulp init && git add . && git commit -m 'Heroku deployment' && git push heroku master && heroku open",
     "heroku_open":"heroku open",
     "heroku_log":"heroku logs --tail",
     "compile": "gulp init && gulp execute"
@@ -36,7 +36,6 @@
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "nyc": "^10.2.0",
-    "poncho": "^0.1.1",
     "supertest": "^3.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

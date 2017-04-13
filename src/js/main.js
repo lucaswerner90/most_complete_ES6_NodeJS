@@ -5,11 +5,13 @@
 // Here is the main class of the application
 class VendigoBookStore{
   constructor(settings_object){
+    
+    this._host='https://shielded-peak-27861.herokuapp.com';
 
     this._urls_data={
-      init_data:{url:'http://localhost:7000/api/books',method:'GET'},
-      title:{url:'http://localhost:7000/api/books/title',method:'POST',body:{title:""}},
-      olid:{url:'http://localhost:7000/api/books/OLID',method:'POST',body:{OLID:""}}
+      init_data:{url:this._host+'/api/books',method:'GET'},
+      title:{url:this._host+'/api/books/title',method:'POST',body:{title:""}},
+      olid:{url:this._host+'/api/books/OLID',method:'POST',body:{OLID:""}}
     }
 
     this._list_books=settings_object.list_of_books;
