@@ -28,10 +28,7 @@ app.use(express.static('dist'));
 // For test purposses we check for the module.parent
 // and exports our server to be used with supertest on our test
 if(!module.parent){
-  app.listen({
-    host: HOST,
-    port: PORT
-  });
+  app.listen(PORT);
 }
 
 
