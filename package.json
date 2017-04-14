@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "repository" :{
-    "type" : "git",
-    "url" : "https://github.com/lucaswerner90/most_complete_ES6_NodeJS.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucaswerner90/most_complete_ES6_NodeJS.git"
   },
   "scripts": {
     "start": "node server.js",

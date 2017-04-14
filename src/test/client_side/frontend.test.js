@@ -6,7 +6,7 @@ describe('APPInit', function () {
     assert(APP._button);
     assert(APP._input);
   });
-  
+
   it('List of books has the same childs at the length of the received data', (done) => {
     APP._loadData(APP._urls_data.init_data,(error,data)=>{
       APP._paintBooks(data);
