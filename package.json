@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/lucaswerner90/most_complete_ES6_NodeJS.git"
+  },
   "scripts": {
     "start": "node server.js",
     "launch": "DEBUG=express* PORT=7000 nodemon --inspect server.js",
-    "test": "PORT=9000 mocha --watch ./src/test/server_side/**/*.test.js",
+    "test": "PORT=9000 mocha ./src/test/server_side/**/*.test.js",
+    "test:watch": "PORT=9000 mocha --watch ./src/test/server_side/**/*.test.js",
     "upload:github": "git add -A && git commit -m 'Automatic commit from package.json' && git push -u ownbranch master",
     "coverage": "PORT=9000 nyc --reporter=html mocha --watch ./src/test/server_side/**/*.test.js",
     "heroku:deploy": "gulp init && git add . && git commit -m 'Heroku deployment' && git push heroku master && heroku open",
